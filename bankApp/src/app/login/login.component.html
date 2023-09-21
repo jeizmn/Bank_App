@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 mt-5 border  bg-light " style="width: 419px;height: 500px;">
+        <div style="
+        background-color: green;height: 200px;margin-top: -48px;width: 418px; margin-left: -13px;color: white;">
+        <h1 class="mt-5 mb-4 text-center">E Finance Bank</h1>
+        <h6 style="margin-left: 100px">{{aim}}</h6>
+        <img id="logo" src="../../assets/images/preview.jpg" alt="">
+        </div>
+        <form [formGroup]="loginForm" class="p-5" style="margin-left: -49px;">
+            <input  formControlName="acno" type="text" id="login_accno" name="acno" class="form-control " placeholder="accounts">
+            <div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+            <input formControlName="pswd" type="password" id="login_pass" name="pswd" class="form-control mt-2" placeholder="Password">
+            <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+            <div class="d-grid gap-2">
+                <input type="button" value="Sign in"  class="btn btn-success mt-3" (click)="login()" style="margin-left: 131px;width: 138px;">
+            </div>
+            <div class="mt-4 " style="margin-left: 67px; color: green;">
+                <a href="" id="links" style="color: green;">Forget Password</a>
+            or
+            <a routerLink="register" id="link2" style="text-decoration: none; " >sign up</a>
+
+            </div>
+            
+        </form>    
+    </div>
+    <div class="col-4"></div>
+</div>

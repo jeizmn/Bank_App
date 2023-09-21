@@ -1,0 +1,93 @@
+<input type="button" value="Logout" class="btn btn-danger btn-xl" (click)="logout()" style="float: right;">
+<input type="button" value="Delete" class="btn btn-danger btn-xl" (click)="delete()" style="float: right;">
+
+<div class="parent" [ngClass]="acno? 'style1':''">
+    <!--[ngClass]-To display-->
+
+    <h1>Welcome {{user}}</h1>
+
+    <h4>Syate Date and Time:{{SystemDate | date}}</h4>
+
+    <h4>Syate Date and Time:{{SystemDate | date : 'short'}}</h4>
+
+
+    <div>
+        <a routerLink="/transaction">View Transaction History</a>
+    </div>
+
+
+    <app-delete [item]="acno" (onCancel)="onCancel()" (onDelete)="onDelete($event)"></app-delete>
+
+    
+    <div class="child">
+        <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5 border  bg-light " style="width: 419px;height: 500px;border-radius: 5%;">
+            <div style="
+            background-color: green;height: 200px;margin-top: -48px;width: 418px; margin-left: -13px;color: white;border-radius: 5%;">
+            <h1 class="mt-5 mb-4 text-center">Deposit</h1>
+            <img id="logo" src="../../assets/images/preview.jpg" alt="">
+            </div>
+            <form [formGroup]="creditForm" class="p-5" style="margin-left: -49px;">
+                
+                <input formControlName="acno" name="acno" type="text" id="dep_accno" class="form-control mt-2 " placeholder="Account Number">
+                <div *ngIf="this.creditForm.get('acno')?.errors&&this.creditForm.get('acno')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+                <input formControlName="pswd" name="pswd" type="password" id="dep_pass" class="form-control mt-2" placeholder="Password">
+                <div *ngIf="this.creditForm.get('pswd')?.errors&&this.creditForm.get('pswd')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+                
+                <input formControlName="amount" name="amount" type="text" id="dep_amount" class="form-control " placeholder="Amount">
+                <div *ngIf="this.creditForm.get('amount')?.errors&&this.creditForm.get('amount')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+                <div class="d-grid gap-2">
+                   
+                    <input type="button" value="Deposit"  class="btn btn-success mt-3 " (click)="deposit()" style="margin-left: 131px;width: 138px;">
+                 </div>
+                <div class="mt-3 " style="margin-left: 167px;">
+                   
+    
+                </div>
+                
+            </form>    
+        </div>
+        <div class="col-4"></div>
+    </div>
+    </div>
+
+    
+    <div class="child">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 mt-5 border  bg-light " style="width: 419px;height: 500px;border-radius: 5%;">
+                <div style="
+                background-color: green;height: 200px;margin-top: -48px;width: 418px; margin-left: -13px;color: white;border-radius: 5%;">
+                <h1 class="mt-5 mb-4 text-center">Withdraw</h1>
+                <img id="logo" src="../../assets/images/preview.jpg" alt="">
+                </div>
+                <form [formGroup]="debitForm" class="p-5" style="margin-left: -49px;">
+                    
+                    <input formControlName="acno1" name="acno" type="text" id="with_accno" class="form-control mt-2 " placeholder="Account Number">
+                    <div *ngIf="this.debitForm.get('acno1')?.errors&&this.debitForm.get('acno1')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+                    <input formControlName="pswd1" name="pswd" type="password" id="with_pass" class="form-control mt-2" placeholder="Password">
+                    <div *ngIf="this.debitForm.get('pswd1')?.errors&&this.debitForm.get('pswd1')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+                    <input formControlName="amount1" name="amount" type="text" id="with_amount" class="form-control " placeholder="Amount">
+                    <div *ngIf="this.debitForm.get('amount1')?.errors&&this.debitForm.get('amount1')?.touched" style="color: red; text-align:center;">Invalid Data</div>
+
+
+                    <div class="d-grid gap-2">
+                       
+                        <input type="button" value="Withdraw"  class="btn btn-success mt-3 " (click)="withdraw()" style="margin-left: 131px;width: 138px;">
+                     </div>
+                    <div class="mt-3 " style="margin-left: 167px;">
+                       
+        
+                    </div>
+                    
+                </form>    
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</div>

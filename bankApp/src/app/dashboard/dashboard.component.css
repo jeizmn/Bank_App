@@ -1,0 +1,53 @@
+#logo{
+    height: 100px;
+    border-radius: 95%;
+    text-shadow: dodgerblue;
+    margin-left: 160px;
+}
+h1{
+    font-family: 'Playfair Display', serif;
+}
+
+#dep_accno{
+    width: 250px;
+    margin-left: 80px;
+}
+#dep_pass{
+    width: 250px;
+    margin-left: 80px;
+
+}
+#dep_amount{
+    width: 250px;
+    margin-left: 80px;
+
+}
+
+#links{
+    text-decoration: none;
+    
+}
+/*withdraw style*/
+#with_accno{
+    width: 250px;
+    margin-left: 80px;
+}
+#with_pass{
+    width: 250px;
+    margin-left: 80px;
+
+}
+#with_amount{
+    width: 250px;
+    margin-left: 80px;
+
+}
+
+.child{
+    display: inline-block;
+    margin-left: 170px; 
+}
+
+.style1{
+    opacity: 1;
+}

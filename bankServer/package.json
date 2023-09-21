@@ -1,0 +1,22 @@
+{
+  "name": "bankserver",
+  "version": "1.0.0",
+  "description": "Creating bank app server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon db.js"
+  },
+  "author": "Jees",
+  "license": "ISC",
+  "dependencies": {
+    "bson": "^4.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "kerberos": "^2.0.1",
+    "mongoose": "^6.7.3",
+    "mongos": "^0.0.0",
+    "mongose": "^0.0.2-security",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,29 @@
+#logo{
+    height: 100px;
+    border-radius: 95%;
+    text-shadow: green;
+    margin-left: 160px;
+}
+h1{
+    font-family: 'Playfair Display', serif;
+}
+
+#reg_accno{
+    width: 250px;
+    margin-left: 80px;
+}
+#reg_pass{
+    width: 250px;
+    margin-left: 80px;
+
+}
+#reg_uname{
+    width: 250px;
+    margin-left: 80px;
+
+}
+
+#links{
+    text-decoration: none;
+    color: green;
+}

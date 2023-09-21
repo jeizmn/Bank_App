@@ -1,0 +1,84 @@
+Data Binding 
+-Share data inside the component
+
+1.One way Binding (data sharing only 1 direction)
+
+    ts- component
+    html- view
+
+    1.1 component to view (ts-> html) 
+        a) String interpolation - {{expression}}
+        b) property binding -[attribute_name]='property binding'
+    1.2 view to component (htmt -> ts)
+
+        a) Event binding -(event_name)="function_name()"
+        b)Event binding using $event -(event_name)="function_name($event)"
+        c)Event binding using template referencing variable - #variable_name
+
+2.Two way binding
+
+    [(ngModel)]="property name"
+
+
+    Angular Routing
+    ---------------
+    to set path for a component
+
+        {
+            path=value,component:class_name
+        }
+        app-routing.module.ts
+
+    Dependancy Injection
+    ---------------------
+    to Share data between two dependent classes
+
+    Angular Service
+    ----------------
+    to hold redundant data (duplicate data)
+        -ng g s service_name
+    
+    Angular Directives
+    ------------------
+    To manipulate DOM
+
+    a)Component Directives
+
+    b)Structural Directives
+
+    1)ngFor
+    2)ngIf
+    3)ngClass
+
+
+    Angular Forms
+    --------------
+
+    a)Template Driven Forms-To design html page(first design html page)
+
+    b)Model Driven Forms-(first design ts file -> html page)
+        1)Reactive FormsModule
+        formGroup,array,control
+        -Add avd validations
+        -import Reactive Form modules
+
+
+    localStorage
+    -getItem
+    -removeItem
+
+    parent child relation
+
+        1)parent to child - @Input
+        2)child to parent - @Output
+
+    Angular pipe
+
+    {{value-expression |date [ : format [timezone]]}}
+
+RxJs -  Reactive Extension for JavaScript
+
+To solve asychronous angular request
+    1- observable(ts)- Alternative of promise(js)
+         -> subscribe()- Resolve
+         -> catch()- Reject

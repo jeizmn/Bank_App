@@ -1,0 +1,28 @@
+#logo{
+    height: 100px;
+    border-radius: 95%;
+    text-shadow: green;
+    margin-left: 160px;
+}
+
+#login_accno{
+    width: 250px;
+    margin-left: 80px;
+}
+#login_pass{
+    width: 250px;
+    margin-left: 80px;
+
+}
+
+#links{
+    text-decoration: none;
+    margin-left: 30px;
+    
+}
+h1{
+    font-family: 'Playfair Display', serif;
+}
+#link2{
+    color: green;
+}
